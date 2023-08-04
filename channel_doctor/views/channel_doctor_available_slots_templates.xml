@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--Channel Doctor Available Slots view-->
+    <template id="channel_doctor_available_slots" name="Available Slots">
+        <t t-call="website.layout">
+
+            <div class="channel-doctor-available-slots">
+                <div class="time-slots-main">
+                    <h2>Available Slots</h2>
+                </div>
+                <t t-foreach="[1, 2, 3]" t-as="doctor">
+                    <div class="doctors">
+                        <h4><t t-esc="'Doctor %s' % doctor"/></h4>
+                        <hr/>
+                        <div class="cards">
+                            <t t-foreach="[1, 2, 3]" t-as="time">
+                                <article class="information card">
+                                    <span class="tag">Time Slot</span>
+                                    <h2 class="title">Test Test</h2>
+                                    <p class="info">Elemenatary tracks all the events for the day as you scheduled and you will never have to worry.</p>
+                                    <button class="button book-appointment" t-attf-data-href="/doctor-appointment/{{ doctor }}">
+                                        <span t-attf-data-href="/doctor-appointment/{{ doctor }}">Book Appointment</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="none">
+                                            <path d="M0 0h24v24H0V0z" fill="none" />
+                                            <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z" fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                </article>
+                            </t>
+                        </div>
+                    </div>
+                </t>
+            </div>
+
+        </t>
+    </template>
+
+</odoo>

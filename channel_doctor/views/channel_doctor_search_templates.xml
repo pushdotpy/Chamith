@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--Channel Doctor Search view-->
+    <template id="channel_doctor_search" name="Channel A Doctor">
+        <t t-call="website.layout">
+
+            <div class="channel-doctor-main">
+                <section id="channel-doctor">
+                    <div class="container">
+                        <div class="searchwrapper">
+                            <h1>Need a doctor?</h1>
+                            <p>Search and appoint from below</p>
+                            <div class="searchbox">
+                                <form action="/available-doctors" method="post">
+                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <input type="date" class="form-control" placeholder="Appointment Date" name="appointment-date" id="appointment-date" required="1"/>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <select class="form-control doctor" name="doctor" id="doctor">
+                                                <option value="all" selected="1">Select Doctor</option>
+                                                <option value="d1">Doctor 1</option>
+                                                <option value="d2">Doctor 2</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3"/>
+                                        <div class="col-md-1">
+                                            <input type="submit" class="btn btn-primary form-control" value="Search"/>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </t>
+    </template>
+
+</odoo>

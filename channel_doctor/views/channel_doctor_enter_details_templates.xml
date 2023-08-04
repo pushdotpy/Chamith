@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--Channel Doctor Enter Details view-->
+    <template id="channel_doctor_enter_details" name="Available Slots">
+        <t t-call="website.layout">
+
+            <div class="channel-doctor-enter-details">
+                <div class="channel-doctor-main-wrapper">
+                    <div class="channel-doctor-form-wrapper">
+                        <h2 class="pb-3">Your Details</h2>
+                        <form t-att-action="action_url" method="post">
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                            <div class="channel-doctor-mb-5">
+                                <label for="name" class="channel-doctor-form-label"> Full Name </label>
+                                <input type="text"
+                                       name="name"
+                                       id="name"
+                                       placeholder="Full Name"
+                                       class="channel-doctor-form-input"
+                                       required="1"/>
+                            </div>
+                            <div class="channel-doctor-mb-5">
+                                <label for="phone" class="channel-doctor-form-label"> Phone Number </label>
+                                <input type="text"
+                                       name="phone"
+                                       id="phone"
+                                       placeholder="Enter your phone number"
+                                       class="channel-doctor-form-input"
+                                       required="1"/>
+                            </div>
+                            <div class="channel-doctor-mb-5">
+                                <label for="email" class="channel-doctor-form-label"> Email Address </label>
+                                <input type="email"
+                                       name="email"
+                                       id="email"
+                                       placeholder="Enter your email"
+                                       class="channel-doctor-form-input"
+                                       required="1"/>
+                            </div>
+                            <div class="flex flex-wrap channel-doctor--mx-3">
+                                <div class="w-full sm:w-half channel-doctor-px-3">
+                                    <div class="channel-doctor-mb-5 w-full">
+                                        <label for="date" class="channel-doctor-form-label"> Date </label>
+                                        <input type="date"
+                                               name="date"
+                                               id="date"
+                                               class="channel-doctor-form-input" />
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-half channel-doctor-px-3">
+                                    <div class="channel-doctor-mb-5">
+                                        <label for="time" class="channel-doctor-form-label"> Time </label>
+                                        <input type="time"
+                                               name="time"
+                                               id="time"
+                                               class="channel-doctor-form-input" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="channel-doctor-mb-5 channel-doctor-pt-3">
+                                <label class="channel-doctor-form-label channel-doctor-form-label-2">
+                                    Address Details
+                                </label>
+                                <div class="flex flex-wrap channel-doctor--mx-3">
+                                    <div class="w-full sm:w-half channel-doctor-px-3">
+                                        <div class="channel-doctor-mb-5">
+                                            <input type="text"
+                                                   name="area"
+                                                   id="area"
+                                                   placeholder="Enter area"
+                                                   class="channel-doctor-form-input"/>
+                                        </div>
+                                    </div>
+                                    <div class="w-full sm:w-half channel-doctor-px-3">
+                                        <div class="channel-doctor-mb-5">
+                                            <input type="text"
+                                                   name="city"
+                                                   id="city"
+                                                   placeholder="Enter city"
+                                                   class="channel-doctor-form-input"/>
+                                        </div>
+                                    </div>
+                                    <div class="w-full sm:w-half channel-doctor-px-3">
+                                        <div class="channel-doctor-mb-5">
+                                            <input type="text"
+                                                   name="state"
+                                                   id="state"
+                                                   placeholder="Enter state"
+                                                   class="channel-doctor-form-input"/>
+                                        </div>
+                                    </div>
+                                    <div class="w-full sm:w-half channel-doctor-px-3">
+                                        <div class="channel-doctor-mb-5">
+                                            <input type="text"
+                                                   name="post-code"
+                                                   id="post-code"
+                                                   placeholder="Post Code"
+                                                   class="channel-doctor-form-input"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <button class="channel-doctor-btn" type="submit">Book Appointment</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </t>
+    </template>
+
+</odoo>

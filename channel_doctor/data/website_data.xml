@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!--Channel Doctor menu-->
+        <record id="website_menu_channel_doctor" model="website.menu">
+            <field name="name">Channel A Doctor</field>
+            <field name="url">/channel-doctor-search</field>
+            <field name="sequence" type="int">30</field>
+        </record>
+
+    </data>
+</odoo>

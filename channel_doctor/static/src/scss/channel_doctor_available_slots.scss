@@ -1,0 +1,130 @@
+.channel-doctor-available-slots {
+  // Basic
+  --c-white: #fff;
+  --c-black: #000;
+
+  // Greys
+  --c-ash: #eaeef6;
+  --c-charcoal: #a0a0a0;
+  --c-void: #141b22;
+
+  // Beige/Browns
+  --c-fair-pink: #FFEDEC;
+  --c-apricot: #FBC8BE;
+  --c-coffee: #754D42;
+  --c-del-rio: #917072;
+
+  // Greens
+  --c-java: #1FCAC5;
+  --c-green: #3AA6B9;
+
+  // Purples
+  --c-titan-white: #f1eeff;
+  --c-cold-purple: #a69fd6;
+  --c-indigo: #6558d3;
+  --c-governor: #4133B7;
+
+  line-height: 1.8;
+  min-height: 100vh;
+  background-color: var(--c-white);
+
+  .time-slots-main {
+    max-width: 1000px;
+    margin: 15px auto 0 auto;
+    h2 {
+      margin-left: 2px;
+      color: #0b7b6c;
+    }
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto 5vh auto;
+    padding-bottom: 10px;
+  }
+
+  .doctors {
+    max-width: 1000px;
+    border-radius: 30px;
+    background-color: #f2f2f2;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    //padding: 50px;
+    margin: 4vh auto 0 auto;
+    text-align: center;
+    h4 {
+      color: #35979c;
+      padding-top: 15px;
+    }
+    hr {
+      color: #35979c;
+    }
+  }
+
+  .card {
+    border-radius: 16px;
+    box-shadow: 0 30px 30px -25px rgba(#4133B7, .25);
+    max-width: 300px;
+    margin: 14px 0 17px 0
+  }
+
+  .information {
+    background-color: var(--c-white);
+    padding: 1.5rem;
+
+    .tag {
+      display: inline-block;
+      background-color: var(--c-titan-white);
+      color: var(--c-green);
+      font-weight: 600;
+      font-size: 0.875rem;
+      padding: 0.5em 0.75em;
+      line-height: 1;
+      border-radius: 6px;
+      & + * {
+        margin-top: 1rem;
+      }
+    }
+
+    .title {
+      font-size: 1.5rem;
+      color: var(--c-void);
+      line-height: 1.25;
+      & + * {
+        margin-top: 1rem;
+      }
+    }
+
+    .info {
+      color: var(--c-charcoal);
+      & + * {
+        margin-top: 1.25rem;
+      }
+    }
+
+    .button {
+      font: inherit;
+      line-height: 1;
+      background-color: var(--c-white);
+      border: 2px solid var(--c-green);
+      color: var(--c-green);
+      padding: 0.5em 1em;
+      border-radius: 6px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      &:hover,
+      &:focus {
+        background-color: var(--c-green);
+        color: var(--c-white);
+      }
+    }
+  }
+}
